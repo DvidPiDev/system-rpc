@@ -24,7 +24,7 @@ async function getActivity() {
 
         rpc.setActivity({
             details: `CPU: ${cpuTemp.main} ˚C - ${cpuUtil.speed} GHz`, // CPU: 0°C - 0 GHz
-            state: `RAM: ${memory.toFixed(2)} GB - Processes: ${processes.all}`, // RAM: 0.00 GB - Processes: 0
+            state: `RAM: ${memory.toFixed(2)} GB - Processes: ${processes.all}` // RAM: 0.00 GB - Processes: 0
         });
     } catch (error) {
         console.error(error);
