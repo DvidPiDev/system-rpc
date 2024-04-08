@@ -1,0 +1,10 @@
+{
+  "main": "presence.js",
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "systeminformation": "^5.22.7"
+  },
+  "scripts": {
+    "start": "node ./presence.js"
+  }
+}
