@@ -1,12 +1,9 @@
-// silly little compute device resources and temp thingy for discord! >.<
-
-const id = ''; // change this to your app's client id
-const refreshEvery = 1000; // this is how often the stats update in milliseconds
-
+// config is in .env
+require('dotenv').config();
 const discordrpc = require('discord-rpc');
 const rpc = new discordrpc.Client({ transport: 'ipc' });
 const si = require('systeminformation');
-discordrpc.register(id);
+discordrpc.register(process.env.DISCORD_ID);
 
 async function getActivity() {
     try {
@@ -22,7 +19,7 @@ async function getActivity() {
 
         const memory = convertToGB(memInBytes);
 
-        rpc.setActivity({
+        await rpc.setActivity({
             details: `CPU: ${cpuTemp.main} ˚C - ${cpuUtil.speed} GHz`, // CPU: 0°C - 0 GHz
             state: `RAM: ${memory.toFixed(2)} GB - Processes: ${processes.all}` // RAM: 0.00 GB - Processes: 0
         });
@@ -36,7 +33,7 @@ rpc.on('ready', async () => {
     await getActivity();
     setInterval(async () => {
         await getActivity();
-    }, refreshEvery);
+    }, process.env.REFRESH);
 });
 
-rpc.login({ clientId: id }).catch(err => console.error(err));
+rpc.login({ clientId: process.env.DISCORD_ID }).catch(err => console.error(err));

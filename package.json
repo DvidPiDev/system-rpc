@@ -2,9 +2,27 @@
   "main": "presence.js",
   "dependencies": {
     "discord-rpc": "^4.0.1",
+    "dotenv": "^16.4.5",
     "systeminformation": "^5.22.7"
   },
   "scripts": {
     "start": "node ./presence.js"
-  }
+  },
+  "name": "system-rpc",
+  "description": "displays a simple discord RPC which has basic system stats",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DvidPiDev/system-rpc.git"
+  },
+  "keywords": [
+    "discord-rpc"
+  ],
+  "author": "DvidPi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DvidPiDev/system-rpc/issues"
+  },
+  "homepage": "https://github.com/DvidPiDev/system-rpc#readme"
 }
