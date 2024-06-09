@@ -16,4 +16,4 @@ optionally, you can also change the REFRESH to configure how often the RPC is re
 ## extra info:
 this was originally made for linux, and thus, support for other operating systems isnt planned
 afaik it should work with other oses just fine, you may have to run this as admin on windows
-- There is an issue with Windows computer that have an intel cpu, CPU temps arent showing
+- There is an issue with Windows computers that have an intel cpu, CPU temps arent showing properly
