@@ -8,7 +8,7 @@ displays a simple discord RPC which has basic system stats
 ## setting up:
 edit the .env file
 ```dotenv
-DISCORD_ID="" // Discord ID of your applciation
+DISCORD_ID="" // Discord ID of your app
 ```
 
 optionally, you can also change the REFRESH to configure how often the RPC is refreshed. the time is in milliseconds
